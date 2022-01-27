@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+      integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <title>Home - Proyecto Final</title>
+  </head>
+  <body>
+    <section>
+      <!--Nav-->
+      <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container-fluid">
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarTogglerDemo01"
+            aria-controls="navbarTogglerDemo01"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse bg-primary text-center" id="navbarTogglerDemo01">
+            <a class="navbar-brand" href="#">Colegio Amadeus</a>
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./views/nosotros.html">Nosotros</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./views/contacto.html">Contacto</a>
+              </li>
+            </ul>
+            <form class="d-flex">
+              <input
+                class="form-control me-2"
+                type="search"
+                placeholder="Buscar"
+                aria-label="Search"
+              />
+              <button class="btn btn-secondary" type="submit">
+                Buscar
+              </button>
+            </form>
+          </div>
+        </div>
+      </nav>
+    </section>
+    <!--Fin del Nav-->
+<div>
+  <img width="100%" src="./img/cabecera_escuela_música.jpg" alt="">
+</div>
+<section>
+  <h1 class="text-center pt-5">Bienvenidos estudiantes</h1>
+</section>
+<!--Primer botón (Usuario)-->
+      <section class="mt-5">
+        <div class="container">
+          <div class="row ">
+            <div class="col mb-4 mt-5">
+              <div class="card text-center card border-dark" style="width: 18rem">  
+                <div class="card-header text-white bg-primary"><h5>Usuario <i class="fas fa-user"></i></h5></div>     
+                <div class="card-body">
+                  <p class="card-text">
+                    Ingresá tu usuario.
+                  </p>
+                  <input id="botonUsuario" class="mb-3" type="text"  placeholder="Escribí acá tu usuario">
+                  <div id="mensajeUsuario" class="mb-2">
+
+                  </div>
+                  <a href="#" id="botonIngresar" class="btn btn-primary"
+                    >Ingresar</a
+                  >
+                </div>
+              </div>
+            </div>
+<!--Segundo botón (Datos)-->
+            <div class="col mb-4 mt-5">
+              <div class="card text-center card border-dark" style="width: 18rem">  
+                <div class="card-header text-white bg-primary"><h5>Datos <i class="far fa-id-card"></i></h5></div>        
+                <div class="card-body">
+                  <p class="card-text">
+                    Ingresá tus datos.
+                  </p>
+                  <input id="nombreAlumno" class="mb-3" type="text"  placeholder="Nombre">
+                  <input id="dniAlumno" class="mb-3" type="text"  placeholder="DNI">
+                  <input id="edadAlumno" class="mb-3" type="text"  placeholder="Edad">
+                  <input id="fechaAlumno" class="mb-3" type="text"  placeholder="Fecha de nacimiento">
+            <div id="mensajeUsuario2" class="mb-2">
+            </div>
+
+                  <a href="#" id="cargarAlumnoId"  class="btn btn-primary mx-auto"
+              >Enviar</a>
+                </div>
+              </div>
+            </div>
+<!--Tercer botón (Talleres)-->
+            <div class="col mb-4 mt-5">
+              <div class="card text-center card border-dark" style="width: 18rem">
+                <div class="card-header text-white bg-primary"><h5>Talleres <i class="fas fa-music"></i></h5></div>         
+                <div class="card-body">
+                  
+                  <p class="card-text">
+                    Elige un taller:</p>
+                    <button id="botonSlideToggleTalleres"  class="btn btn-primary mb-1">Desplegar opciones</button>
+                    <div class="formularioOculto text-start" id="ocultarMostrarTalleres">
+                      <ul>
+                        -Orquesta: lunes 10 a 12hs
+                      </ul>
+                      <ul>
+                        -Música de cámara: martes de 12 a 14hs
+                      </ul>
+                      <ul>
+                        -Instrumento armónico: miércoles de 10 a 112hs
+                      </ul>
+                      <ul>
+                        -Ensamble de cuerdas: jueves de 12 a 14hs
+                      </ul>
+                      <ul>
+                        -Ensamble de viento: viernes de 14 a 16hs
+                      </ul>
+                    </div>
+                    <form>
+                      <input type="text" class="my-1" name="" placeholder="Taller" id="taller">
+                      <input type="text" name="" placeholder="Horario" id="horario">
+                    </form>
+                    <ul id="listaTaller"></ul>
+                    
+                    <div id="mensajeTalleres" class="my-2"></div>
+                    <button href="#" id="capturar" class="btn btn-primary ">Ingresar</button>
+                    <button id="borrarTalleres" class="btn btn-secondary">Borrar</button>
+                    <div class="my-2">
+                      <button id="boton3Enviar" class="btn btn-primary">Enviar</button>
+
+                    </div>
+                  </div>
+              </div>
+            </div>
+          </div>
+        </div>
+<!--Cuarto botón (Primer cuatrimestre)-->
+        <div class="container">
+          <div class="row">
+            <div class="col mb-4 mt-5">
+              <div class="card text-center card border-dark" style="width: 18rem">
+                <div class="card-header text-white bg-primary"><h5>Primer cuatrimestre <i class="far fa-calendar-alt"></i></h5></div>    
+                <div class="card-body">
+
+                  <p class="card-text">
+                    ingresá tus 6 calificaciones del primer cuatrimestre.
+                  </p>
+                  <a href="#" id="calificacionesId" class="btn btn-primary ">Ingresar</a>
+                </div>
+              </div>
+            </div>
+<!--Quinto botón (Calificaciones anuales)-->
+            <div class="col mb-4 mt-5">
+              <div class="card text-center card border-dark" style="width: 18rem">    
+                <div class="card-header text-white bg-primary"><h5>Calificaciones anuales <i class="fas fa-poll"></i></h5></div>          
+                <div class="card-body">
+                  <p class="card-text">
+                    Ingresá todas tus calificaciones de todo el año.
+                  </p>
+                  <a href="#" id="notasId" class="btn btn-primary ">Ingresar</a>
+                </div>
+              </div>
+            </div>
+<!--Sexto botón (Materias a marzo)-->            
+            <div class="col mb-4 mt-5">
+              <div class="card text-center card border-dark" style="width: 18rem">    
+                <div class="card-header text-white bg-primary"><h5>Materias a marzo <i class="fas fa-exclamation-triangle"></i></h5></div>       
+                <div class="card-body">
+                  <p class="card-text">
+                    ingresá todas las materias que te llevaste a marzo.
+                  </p>
+                  <input type="text" class="mb-2" id="listaMaterias" />
+                  <button id="materiasId"  class="btn btn-primary">Agregar</button>
+                  <button id="borrarMateriasId"  class="btn btn-secondary">Borrar</button>
+                  <div>
+                    <button class="btn btn-primary my-2" id="boton6Enviar">Enviar</button>
+                  </div>
+                  <ul id="listaMateriasMarzo"></ul>
+                  <div id="mensajeMarzo"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+<!--Séptimo botón (Previas)-->         
+        <div class="container">
+          <div class="row">
+            <div class="col mb-4 mt-5">
+              <div class="card text-center card border-dark" style="width: 18rem">  
+<div class="card-header text-white bg-primary"><h5>Previas <i class="fas fa-exclamation-circle"></i></h5></div>    
+<div class="card-body">
+  
+  <p class="card-text">
+    ingresá tus materias previas.
+  </p>
+
+  <input id="input" class="mb-2" type="text" />
+
+  <a href="#" id="boton7" class="btn btn-primary ">Ingresar</a>
+  <a href="#" id="boton7Bis" class="btn btn-secondary ">Borrar</a>
+  <div id="botonSubmitBtn7" class="my-2"><button class="btn btn-primary">Enviar</button></div>
+  <ul id="listaUl"></ul>  
+  <div class="my-2 divPrevias"></div>             
+                </div>
+              </div>
+            </div>
+<!--Octavo botón (Instrumento complementario)-->             
+            <div class="col mb-4 mt-5">
+              <div class="card text-center card border-dark" style="width: 18rem">     
+                <div class="card-header text-white bg-primary"><h5>Instrumento complementario <i class="fas fa-drum"></i></h5></div>          
+                <div class="card-body">
+                  <p class="card-text">
+                    Aqui podrás elegir tu instrumento complementario, tendrás opciones de instrumento armónico, melódico o percusión.
+                  </p>
+                  <select name="" id="boton8">
+                    <option value="Piano">Piano</option>
+                    <option value="Guitarra">Guitarra</option>
+                    <option value="Violin">Violin</option>
+                    <option value="Flauta">Flauta</option>
+                    <option value="Percusión">Percusión</option>
+                  </select>
+                  <div class="divInstrumentoCompl"></div>
+                  <button id="botonSubmitBtn8" class="mt-2 btn btn-primary">Enviar</button>
+                </div>
+              </div>
+            </div>
+<!--Noveno botón (Sugerencias)-->             
+            <div  class="col mb-4 mt-5">
+              <div  class="card text-center card border-dark" style="width: 18rem">   
+                <div  class="card-header text-white bg-primary"><h5>Sugerencias <i class="far fa-edit"></i></h5></div>      
+                <div id="divSlide" class="card-body">
+                  <p class="card-text">
+                    Ayudanos a mejorar, ingresá tus sugerencias acá.
+                  </p>
+                  <button id="botonSlideToggle"  class="btn btn-primary my-1">Desplegar</button>
+        <form class="formularioCaer formularioOculto">
+          <input class="mt-2 sugerencia1" type="text"  placeholder="Escribí tus sugerencias">
+          <input class="mt-2 sugerencia2" type="text"  placeholder="Escribí tus sugerencias">
+          <input class="mt-2 sugerencia3" type="text"  placeholder="Escribí tus sugerencias">
+          </form>
+          <div id="sugerencia1"></div>
+          <div id="sugerencia2"></div>
+          <div id="sugerencia3"></div>
+          <div class="divSugerencias"></div>
+  <div id="botonSubmitBtn9" class="mt-2"><button class="btn btn-primary">Enviar</button></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+<!--Décimo botón (Botón del clima)-->        
+        <div class="container">
+          <div class="row">
+            <div class="col mb-4 mt-5">
+              <div class="card text-center card border-dark" style="width: 18rem">  
+<div class="card-header text-white bg-primary"><h5>Clima <i class="fas fa-temperature-low"></i></h5></div>    
+<div class="card-body cardClima">
+  <p class="card-text">
+    Acá podrás ver el clima antes de venir a clases.
+  </p>
+  <a href="#" id="botonClima" class="btn btn-primary ">Ver el clima</a>
+  <ul id="listaUl2"></ul>               
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+<button id="botonFlecha"><i class="fas fa-arrow-up"></i></button>
+  <section>
+  <h2 class="text-center py-5">Clases de música</h2>
+  <h5 class="text-center mb-5"><i class="fas fa-user-friends"></i>  Acá tenemos algunas de nuestras clases particulares personalizadas para cada alumno</h5>
+  <div class="container mb-5">
+    <div class="row row-cols-1 row-cols-md-2 g-4">
+      <div class="col">
+          <div class="card ratio ratio-16x9 mx-auto">
+            <iframe
+                src="https://www.youtube.com/embed/d5BoGROBYyc"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+                ></iframe>
+          </div>
+      </div>
+      <div class="col">
+        <div class="card ratio ratio-16x9 mx-auto">
+          <iframe
+              src="https://www.youtube.com/embed/ANJL-KSo4Dw"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+              ></iframe>
+        </div>
+      </div>
+
+          </div>
+      </div>
+    </div>
+</section>
+    <!--FOOTER-->
+    <footer class="text-light bg-primary pt-3 pb-3">
+      <div class="container text-center text-md-left">
+        <div class="row text-center text-md-left">
+          <div class="col-md-12 col-lg-3 mx-auto mt-3">
+            <h5 class="text-uppercase mb-4 textos-con-color">
+              Colegio Amadeus
+            </h5>
+            <p>
+              El colegio Amadeus es un colegio secundario orientado en música
+              clásica.
+            </p>
+          </div>
+          <div class="col-md-12 col-lg-3 mx-auto mt-3">
+            <h5 id="Redes" class="text-uppercase mb-4 font-weight-bold">
+              Redes
+            </h5>
+            <ul class="list-unstyled list-inline">
+              <li class="list-inline-item">
+                <a
+                  href="https://www.facebook.com/diego.lopez.33449"
+                  target="blank_"
+                  class="btn-floating btn-sm text-white"
+                  style="font-size: 23px"
+                  ><i class="fab fa-facebook"></i
+                ></a>
+              </li>
+              <li class="list-inline-item">
+                <a
+                  href="https://twitter.com/musiqueeee"
+                  target="blank_"
+                  class="btn-floating btn-sm text-white"
+                  style="font-size: 23px"
+                  ><i class="fab fa-twitter"></i
+                ></a>
+              </li>
+              <li class="list-inline-item">
+                <a
+                  href="https://www.instagram.com/dieguitarra/"
+                  target="blank_"
+                  class="btn-floating btn-sm text-white"
+                  style="font-size: 23px"
+                  ><i class="fab fa-instagram"></i
+                ></a>
+              </li>
+              <li class="list-inline-item">
+                <a
+                  href="https://www.youtube.com/user/Musiqueeee"
+                  target="blank_"
+                  class="btn-floating btn-sm text-white"
+                  style="font-size: 23px"
+                  ><i class="fab fa-youtube"></i
+                ></a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-md-12 col-lg-3 mx-auto mt-3">
+            <img
+              src="./img/klipartz.com.png"
+              alt="logo"
+              class="img-logo img-fluid"
+            />
+          </div>
+          <div class="col-md-12 col-lg-3 mx-auto mt-3">
+            <h5 class="text-uppercase mb-4 font-weight-bold textos-con-color">
+              Contacto
+            </h5>
+            <p>
+              <i class="fas fa-home mr-3"></i> Buenos Aires, Capital Federal
+            </p>
+            <p><i class="fas fa-envelope mr-3"></i> colegioamadeus@gmail.com</p>
+            <p><i class="fab fa-whatsapp mr-3"></i> +54 9 11 5783-2475</p>
+          </div>
+        </div>
+        <hr class="mb-3" />
+        <div class="row">
+          <div class="col-12">
+            <p class="my-2">
+              Hecho en Argentina en 2021 por:<strong class="textos-con-color">
+                Diego López</strong
+              >
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!--FIN FOOTER-->
+    <script src="simulador.js"></script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+  </body>
+</html>

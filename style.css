@@ -1,0 +1,34 @@
+.img-logo {
+  height: 75px;
+  width: 75px;
+}
+.navbar {
+  height: 100px;
+  font-size: 25px;
+}
+.navbar-brand {
+  font-size: 25px;
+}
+.section1 {
+  background-image: url(../segunda-entrega-proyecto-final/img/cabecera_escuela_música.jpg);
+  width: 100%;
+}
+.formularioOculto {
+  display: none;
+}
+.imagenNosotros {
+  width: 100%;
+}
+#botonFlecha {
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  font-size: 22px;
+  width: 50px;
+  height: 50px;
+  background: #7c7c7c;
+  color: white;
+  border-radius: 15%;
+  cursor: pointer;
+  display: none;
+}
